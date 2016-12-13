@@ -17,6 +17,5 @@
         </config-file>
         <source-file src="src/ios/getting_started_ios.pdf" target-dir="www"/>
         <source-file src="src/ios/FoxitPdfPreview.m"/>
-        <!--<framework src="src/ios/FoxitRDK.framework" custom="true"/>-->
     </platform>
 </plugin>
