@@ -23,7 +23,7 @@ This plugin provides the ability to preview pdf files with Foxit Pdf Sdk on a de
 __NOTE__:                 
 1. 使用的时候，需要将 Foxit Pdf Sdk 引入到 项目中。
 
-![https://github.com/niuemperor/FoxitPdfPreiview-Cordova-iOS](https://github.com/niuemperor/FoxitPdfPreiview-Cordova-iOS/images/cordova-plugin-foxitpdf.gif)
+![](https://github.com/niuemperor/FoxitPdfPreiview-Cordova-iOS/blob/master/images/cordova-plugin-foxitpdf.gif)
 
 ## Installation
 ```bash
