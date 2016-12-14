@@ -18,7 +18,7 @@
                 <param name="ios-package" value="FoxitPdf"/>
             </feature>
         </config-file>
-        <source-file src="src/ios/getting_started_ios.pdf" target-dir="www"/>
+        <source-file src="src/ios/getting_started_ios.pdf"/>
         <source-file src="src/ios/FoxitPdf.m"/>
     </platform>
 </plugin>

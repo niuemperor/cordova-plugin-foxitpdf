@@ -47,3 +47,32 @@ window.FoxitPdf.preview(filePath,success,error);
 ## Supported Platforms
 
 - iOS
+
+
+### iOS Quirks
+preiview方法的第一个参数，目前只支持传入文件的绝对路径。
+
+可以使用 [cordova-plugin-file](https://github.com/apache/cordova-plugin-file) 插件提供的参数，获取到文件的绝对路径。
+
+使用 
+```bash
+cordova plugin add cordova-plugin-file
+```
+引入项目即可使用
+
+### Quick Example
+
+需要事先讲文件放入项目中。位置默认放在项目根目录
+
+```js
+var success = function(data){
+    console.log(data);
+}
+var error = function(data){
+    console.log(data);
+}
+function preview(){
+    var filePath = cordova.file.applicationDirectory + 'getting_started_ios.pdf';
+    window.FoxitPdf.preview(filePath,success,error);
+}
+```
