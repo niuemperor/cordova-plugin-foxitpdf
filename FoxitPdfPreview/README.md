@@ -1,4 +1,4 @@
-# FoxitPdfPreiview-Cordova-iOS
+This plugin provides the ability to preview pdf files with Foxit Pdf Sdk on a device.
 
 # Install
 ```bash
