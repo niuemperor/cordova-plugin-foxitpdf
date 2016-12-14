@@ -1,21 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="FoxitPdfPreview" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
+<plugin id="cordova-plugin-foxitpdf" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
-    <name>FoxitPdfPreview</name>
+
+    <name>cordova-plugin-foxitpdf</name>
     <description>cordova pdf preview plugin with Foxit Pdf sdk</description>
     <author>huang niu</author>
     <keywords>pdf,perview,foxit</keywords>
     <license>Apache 2.0 License</license>
-    <js-module name="FoxitPdfPreview" src="www/FoxitPdfPreview.js">
-        <clobbers target="cordova.plugins.FoxitPdfPreview"/>
+
+    <js-module name="FoxitPdf" src="www/FoxitPdf.js">
+        <clobbers target="window.FoxitPdf"/>
     </js-module>
+
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
-            <feature name="FoxitPdfPreview">
-                <param name="ios-package" value="FoxitPdfPreview"/>
+            <feature name="FoxitPdf">
+                <param name="ios-package" value="FoxitPdf"/>
             </feature>
         </config-file>
         <source-file src="src/ios/getting_started_ios.pdf" target-dir="www"/>
-        <source-file src="src/ios/FoxitPdfPreview.m"/>
+        <source-file src="src/ios/FoxitPdf.m"/>
     </platform>
 </plugin>

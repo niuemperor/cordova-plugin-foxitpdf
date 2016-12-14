@@ -1,18 +1,18 @@
-/********* FoxitPdfPreview.m Cordova Plugin Implementation *******/
+/********* FoxitPdf.m Cordova Plugin Implementation *******/
 
 #import <Cordova/CDV.h>
 
 #import <FoxitRDK/FSPDFObjC.h>
 #import <FoxitRDK/FSPDFViewControl.h>
 
-@interface FoxitPdfPreview : CDVPlugin {
+@interface FoxitPdf : CDVPlugin {
   // Member variables go here.
 }
 
 - (void)Preview:(CDVInvokedUrlCommand*)command;
 @end
 
-@implementation FoxitPdfPreview
+@implementation FoxitPdf
 {
     NSString *tmpCommandCallbackID;
 }
