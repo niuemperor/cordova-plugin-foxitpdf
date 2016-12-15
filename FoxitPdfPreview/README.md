@@ -111,7 +111,7 @@ The product is still in the early stage of development. Later will focus on the 
 
 
 
-You can ask us questions or bugs in the use of [https://github.com/niu- imperial/cordova-plugin-foxitpdf/issues].
+You can ask us questions or bugs in [here](https://github.com/niuemperor/cordova-plugin-foxitpdf/issues).
 
 You can also send email **huang_niu@foxitsoftware.com** to explain your problem.
 

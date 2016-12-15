@@ -1,6 +1,6 @@
 {
   "name": "cordova-plugin-foxitpdf",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "cordova pdf preview plugin with Foxit Pdf sdk",
   "cordova": {
     "id": "cordova-plugin-foxitpdf",
