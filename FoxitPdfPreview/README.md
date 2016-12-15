@@ -63,6 +63,7 @@ preiview方法的第一个参数，目前只支持传入文件的绝对路径。
 
 使用以下命令，添加 [cordova-plugin-file](https://github.com/apache/cordova-plugin-file) 插件到你的项目中
 
+
 The first argument to the preiview method, currently only supports absolute paths to incoming files.
 
 You can obtain the absolute path to the file using the method provided by the [cordova-plugin-file] (https://github.com/apache/cordova-plugin-file) plugin.
@@ -76,6 +77,7 @@ cordova plugin add cordova-plugin-file
 ### Quick Example
 
 需要事先将pdf文件放入项目中。位置默认放在项目根目录
+
 The pdf file needs to be placed in the project beforehand. The location is placed in the project root by default
 
 ```js
@@ -93,6 +95,7 @@ function preview(){
 ## Attention
 ----
 产品目前还是处于刚开发阶段. 后期将会着重于功能的完善和细化.
+
 The product is still in the early stage of development. Later will focus on the function of refinement and refinement.
 
 
@@ -103,6 +106,7 @@ The product is still in the early stage of development. Later will focus on the 
 你也可以发送邮件**huang_niu@foxitsoftware.com**说明您的问题。
 
 如果你有更好代码实现,请 fork 此项目并发起您的 Pull-Request，我们会及时处理。感谢!
+
 
 You can ask us questions or bugs in the use of [https://github.com/niu- imperial/cordova-plugin-foxitpdf/issues].
 
