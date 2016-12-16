@@ -25,7 +25,7 @@ This plugin provides the ability to preview pdf files with Foxit Pdf Sdk on a de
 __NOTE__:                 
 使用插件的时候，必须提前将 Foxit Pdf Sdk 引入到 项目中。
 
-如何引入请参考Blog:xxxxxxx
+如何引入请参考Blog:http://blog.csdn.net/lzfly/article/details/52767548(转载自csdn,amy)
 
 When using plug-ins, Foxit Pdf Sdk must be introduced to the project in advance.
 
