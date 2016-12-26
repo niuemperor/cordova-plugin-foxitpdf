@@ -20,7 +20,7 @@
 # cordova-plugin-foxitpdf
 This plugin provides the ability to preview pdf files with Foxit Pdf Sdk on a device.
 
-![](https://github.com/niuemperor/cordova-plugin-foxitpdf/blob/master/images/cordova-plugin-foxitpdf.gif)
+![](https://raw.githubusercontent.com/niuemperor/cordova-plugin-foxitpdf/master/images/cordova-plugin-foxitpdf.gif)
 
 __NOTE__:                 
 使用插件的时候，必须提前将 Foxit Pdf Sdk 引入到 项目中。
