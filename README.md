@@ -20,19 +20,12 @@
 # cordova-plugin-foxitpdf
 This plugin provides the ability to preview pdf files with Foxit Pdf Sdk on a device.
 
-![](https://raw.githubusercontent.com/niuemperor/cordova-plugin-foxitpdf/master/images/cordova-plugin-foxitpdf.gif)
-
-__NOTE__:                 
-使用插件的时候，必须提前将 Foxit Pdf Sdk 引入到 项目中。
-
-如何引入请参考Blog:http://blog.csdn.net/lzfly/article/details/52767548
-(转载自csdn,amy)
-
-When using plug-ins, Foxit Pdf Sdk must be introduced to the project in advance.
+![](https://raw.githubusercontent.com/niuemperor/cordova-plugin-foxitpdf/master/images/cordova-plugin-foxitpdf2.gif)
 
 ## What change
 1. 整合了Foxit RDK UI部分，新增跳转翻页，全文搜索，缩略图预览等功能
 2. 调整了插件集成方式，使集成更简单更方便
+
 
 1. Integrated Foxit RDK UI section, add jump page, full text search, thumbnail preview and other functions
 2. Adjust the plug-in integration, so that integration easier and more convenient
@@ -52,15 +45,14 @@ cordova plugin add cordova-plugin-foxitpdf
 #import "Defines.h"
 #define DEMO_APPDELEGATE  ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
-
 @property (nonatomic, strong) FSPDFViewCtrl* pdfViewCtrl;
 @property (nonatomic, assign) BOOL isFileEdited;
 @property (nonatomic, copy) NSString* filePath;
 @property (nonatomic, assign) BOOL isScreenLocked;
 ```
-
 4. 嵌入 FoxitRDK.framework
 General ->Embed Frameworks -> + -> FoxitRDK.framework
+
 
 
 1. Remove references to FoxitSource, uitextensions. Create the FoxitSource group. (Because cordova plug-in can not create ios group)
@@ -69,17 +61,16 @@ General ->Embed Frameworks -> + -> FoxitRDK.framework
 ```objective-c
 #import "UIExtensionsSharedHeader.h"
 #import "Defines.h"
-#define DEMO_APPDELEGATE ((AppDelegate *) [[UIApplication sharedApplication] delegate])
+#define DEMO_APPDELEGATE  ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
-
-@property (nonatomic, strong) FSPDFViewCtrl * pdfViewCtrl;
+@property (nonatomic, strong) FSPDFViewCtrl* pdfViewCtrl;
 @property (nonatomic, assign) BOOL isFileEdited;
-@property (nonatomic, copy) NSString * filePath;
+@property (nonatomic, copy) NSString* filePath;
 @property (nonatomic, assign) BOOL isScreenLocked;
 ```
-
 4. Embed Foxit RDK.framework
 General -> Embed Frameworks -> + -> FoxitRDK.framework
+
 
 Use this ,in everywhere in your project
 
