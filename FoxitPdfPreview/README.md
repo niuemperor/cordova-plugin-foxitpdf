@@ -28,6 +28,7 @@ This plugin provides the ability to preview pdf files with Foxit RDK on a device
 
 
 
+
 1. Integrated Foxit RDK UI section, add jump page, full text search, thumbnail preview and other functions
 2. Adjust the plug-in integration, so that integration easier and more convenient
 
@@ -51,9 +52,10 @@ cordova plugin add cordova-plugin-foxitpdf
 	@property (nonatomic, assign) BOOL isFileEdited;
 	@property (nonatomic, copy) NSString* filePath;
 	@property (nonatomic, assign) BOOL isScreenLocked;
-```
+    ```
 4. 嵌入 FoxitRDK.framework
 General ->Embed Frameworks -> + -> FoxitRDK.framework
+
 
 
 
