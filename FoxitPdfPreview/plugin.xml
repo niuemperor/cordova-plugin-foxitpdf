@@ -20,5 +20,12 @@
         </config-file>
         <source-file src="src/ios/getting_started_ios.pdf"/>
         <source-file src="src/ios/FoxitPdf.m"/>
+        <header-file src="src/ios/UIExtensionsSharedHeader.h" />
+        <source-file src="src/ios/libFoxitRDKUIExtensions.a" framework="true" compiler-flags="-fno-objc-arc"/>
+        <framework src="src/ios/FoxitRDK.framework" />
+        
+        <source-file src="src/ios/FoxitSource"/>
+        <source-file src="src/ios/uiextensions" />
+
     </platform>
 </plugin>
