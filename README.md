@@ -18,7 +18,7 @@
 -->
 
 # cordova-plugin-foxitpdf
-This plugin provides the ability to preview pdf files with Foxit Pdf Sdk on a device.
+This plugin provides the ability to preview pdf files with Foxit RDK on a device.
 
 ![](https://raw.githubusercontent.com/niuemperor/cordova-plugin-foxitpdf/master/images/cordova-plugin-foxitpdf2.gif)
 
@@ -40,34 +40,35 @@ cordova plugin add cordova-plugin-foxitpdf
 1. 删除 FoxitSource ,uitextensions的引用。再创建 FoxitSource group。(因为cordova 插件不能创建ios group)
 2. 关闭 arc 模式，Build Settings -> Objective-C Automatic Reference Counting 改为 NO
 3. 在 AppDelegate.h 文件中插入一下代码
-```objective-c
-#import "UIExtensionsSharedHeader.h"
-#import "Defines.h"
-#define DEMO_APPDELEGATE  ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
-@property (nonatomic, strong) FSPDFViewCtrl* pdfViewCtrl;
-@property (nonatomic, assign) BOOL isFileEdited;
-@property (nonatomic, copy) NSString* filePath;
-@property (nonatomic, assign) BOOL isScreenLocked;
+	```objective-c
+	#import "UIExtensionsSharedHeader.h"
+	#import "Defines.h"
+	#define DEMO_APPDELEGATE  ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+	@property (nonatomic, strong) FSPDFViewCtrl* pdfViewCtrl;
+	@property (nonatomic, assign) BOOL isFileEdited;
+	@property (nonatomic, copy) NSString* filePath;
+	@property (nonatomic, assign) BOOL isScreenLocked;
 ```
 4. 嵌入 FoxitRDK.framework
 General ->Embed Frameworks -> + -> FoxitRDK.framework
 
 
-
 1. Remove references to FoxitSource, uitextensions. Create the FoxitSource group. (Because cordova plug-in can not create ios group)
 2. Turn off arc mode, Build Settings -> Objective-C Automatic Reference Counting to NO
 3. Insert the following code into the AppDelegate.h file
-```objective-c
-#import "UIExtensionsSharedHeader.h"
-#import "Defines.h"
-#define DEMO_APPDELEGATE  ((AppDelegate*)[[UIApplication sharedApplication] delegate])
 
-@property (nonatomic, strong) FSPDFViewCtrl* pdfViewCtrl;
-@property (nonatomic, assign) BOOL isFileEdited;
-@property (nonatomic, copy) NSString* filePath;
-@property (nonatomic, assign) BOOL isScreenLocked;
-```
+	```objective-c
+	#import "UIExtensionsSharedHeader.h"
+	#import "Defines.h"
+	#define DEMO_APPDELEGATE  ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+	@property (nonatomic, strong) FSPDFViewCtrl* pdfViewCtrl;
+	@property (nonatomic, assign) BOOL isFileEdited;
+	@property (nonatomic, copy) NSString* filePath;
+	@property (nonatomic, assign) BOOL isScreenLocked;
+	```
 4. Embed Foxit RDK.framework
 General -> Embed Frameworks -> + -> FoxitRDK.framework
 
