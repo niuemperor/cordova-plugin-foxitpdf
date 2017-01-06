@@ -22,7 +22,7 @@
         <source-file src="src/ios/FoxitPdf.m"/>
         <header-file src="src/ios/UIExtensionsSharedHeader.h" />
         <source-file src="src/ios/libFoxitRDKUIExtensions.a" framework="true" compiler-flags="-fno-objc-arc"/>
-        <framework src="src/ios/FoxitRDK.framework" />
+        <framework src="src/ios/FoxitRDK.framework" custom="true"/>
         
         <source-file src="src/ios/FoxitSource"/>
         <source-file src="src/ios/uiextensions" />
