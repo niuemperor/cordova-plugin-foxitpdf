@@ -30,6 +30,13 @@ __NOTE__:
 
 When using plug-ins, Foxit Pdf Sdk must be introduced to the project in advance.
 
+## What change
+1. 整合了Foxit RDK UI部分，新增跳转翻页，全文搜索，缩略图预览等功能
+2. 调整了插件集成方式，使集成更简单更方便
+
+1. Integrated Foxit RDK UI section, add jump page, full text search, thumbnail preview and other functions
+2. Adjust the plug-in integration, so that integration easier and more convenient
+
 ## Installation
 ```bash
 cordova plugin add cordova-plugin-foxitpdf
@@ -37,6 +44,42 @@ cordova plugin add cordova-plugin-foxitpdf
 
 
 ## How To Use
+1. 删除 FoxitSource ,uitextensions的引用。再创建 FoxitSource group。(因为cordova 插件不能创建ios group)
+2. 关闭 arc 模式，Build Settings -> Objective-C Automatic Reference Counting 改为 NO
+3. 在 AppDelegate.h 文件中插入一下代码
+```objective-c
+#import "UIExtensionsSharedHeader.h"
+#import "Defines.h"
+#define DEMO_APPDELEGATE  ((AppDelegate*)[[UIApplication sharedApplication] delegate])
+
+
+@property (nonatomic, strong) FSPDFViewCtrl* pdfViewCtrl;
+@property (nonatomic, assign) BOOL isFileEdited;
+@property (nonatomic, copy) NSString* filePath;
+@property (nonatomic, assign) BOOL isScreenLocked;
+```
+
+4. 嵌入 FoxitRDK.framework
+General ->Embed Frameworks -> + -> FoxitRDK.framework
+
+
+1. Remove references to FoxitSource, uitextensions. Create the FoxitSource group. (Because cordova plug-in can not create ios group)
+2. Turn off arc mode, Build Settings -> Objective-C Automatic Reference Counting to NO
+3. Insert the following code into the AppDelegate.h file
+```objective-c
+#import "UIExtensionsSharedHeader.h"
+#import "Defines.h"
+#define DEMO_APPDELEGATE ((AppDelegate *) [[UIApplication sharedApplication] delegate])
+
+
+@property (nonatomic, strong) FSPDFViewCtrl * pdfViewCtrl;
+@property (nonatomic, assign) BOOL isFileEdited;
+@property (nonatomic, copy) NSString * filePath;
+@property (nonatomic, assign) BOOL isScreenLocked;
+```
+
+4. Embed Foxit RDK.framework
+General -> Embed Frameworks -> + -> FoxitRDK.framework
 
 Use this ,in everywhere in your project
 
