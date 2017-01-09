@@ -92,6 +92,9 @@ NSString *UNLOCK = @"ezJvj93HvBh39LusL0W0ja4n+FSgXqp1ClndarfUeOP9wvCzbZdxF4ycpQu
     navCtr.view.backgroundColor = [UIColor whiteColor];
     //    navCtr.modalPresentationStyle = UIModalPresentationFullScreen;
     
+    pdfViewCtrl.autoresizesSubviews = YES;
+    pdfViewCtrl.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
     
     self.readFrame.CordovaPluginViewController = navCtr;
     
