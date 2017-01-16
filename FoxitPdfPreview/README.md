@@ -49,6 +49,11 @@ cordova plugin add cordova-plugin-foxitpdf
 4. 嵌入 FoxitRDK.framework
 General ->Embed Frameworks -> + -> FoxitRDK.framework
 
+5. 在项目配置里增加方向支持
+General -> Deployment info -> Device Orientation 下勾选
+
+Portrait , Landscape Left , Landscape Right
+
 
 在你项目中任意位置使用以下代码
 
@@ -112,6 +117,10 @@ function preview(){
 如果你有更好代码实现,请 fork 此项目并发起您的 Pull-Request，我们会及时处理。感谢!
 
 
+## Request a Quote
+
+http://www.foxitsdk.com/products/mobile-pdf-sdk/request-quote/?from=cordova-plugin-foxitpdf
+
 ## 
 
 
@@ -147,6 +156,11 @@ cordova plugin add cordova-plugin-foxitpdf
 	```
 4. Embed Foxit RDK.framework
 General -> Embed Frameworks -> + -> FoxitRDK.framework
+
+5. In the project configuration to increase the direction of support
+General -> Deployment info -> Device Orientation ,   Check
+
+Portrait , Landscape Left , Landscape Right
 
 
 Use this ,in everywhere in your project
@@ -209,3 +223,7 @@ You can ask us questions or bugs in [here](https://github.com/niuemperor/cordova
 You can also send email **huang_niu@foxitsoftware.com** to explain your problem.
 
 If you have a better code implementation, please fork this project and launch your Pull-Request, we will promptly deal with. thank!
+
+## Request a Quote
+
+http://www.foxitsdk.com/products/mobile-pdf-sdk/request-quote/?from=cordova-plugin-foxitpdf
