@@ -20,18 +20,23 @@
 # cordova-plugin-foxitpdf
 This plugin provides the ability to preview pdf files with Foxit RDK on a device.
 
+
 ![](https://raw.githubusercontent.com/niuemperor/cordova-plugin-foxitpdf/master/images/cordova-plugin-foxitpdf2.gif)
+
 
 ## What change
 1. 整合了Foxit RDK UI部分，新增跳转翻页，全文搜索，缩略图预览等功能
 2. 调整了插件集成方式，使集成更简单更方便
+3. 增加了对android平台的支持
+
 
 ## Installation
 ```bash
 cordova plugin add cordova-plugin-foxitpdf
 ```
 
-## How To Use
+
+## iOS How To Use
 1. 删除 FoxitSource ,uitextensions的引用。再创建 FoxitSource group。(因为cordova 插件不能创建ios group)
 2. 关闭 arc 模式，Build Settings -> Objective-C Automatic Reference Counting 改为 NO
 3. 在 AppDelegate.h 文件中插入以下代码
@@ -47,12 +52,11 @@ cordova plugin add cordova-plugin-foxitpdf
 	@property (nonatomic, assign) BOOL isScreenLocked;
     ```
 4. 嵌入 FoxitRDK.framework
-General ->Embed Frameworks -> + -> FoxitRDK.framework
+	General ->Embed Frameworks -> + -> FoxitRDK.framework
 
 5. 在项目配置里增加方向支持
-General -> Deployment info -> Device Orientation 下勾选
-
-Portrait , Landscape Left , Landscape Right
+	General -> Deployment info -> Device Orientation 下勾选
+	Portrait , Landscape Left , Landscape Right
 
 
 在你项目中任意位置使用以下代码
@@ -69,11 +73,27 @@ window.FoxitPdf.preview(filePath,success,error);
 ```
 
 
+## Android How to use
+```js
+var success = function(data){
+    console.log(data);
+}
+var error = function(data){
+    console.log(data);
+}
+var filePath = 'file://path/to/your/file';
+// var filePath = "/mnt/sdcard/getting_started_ios.pdf";
+window.FoxitPdf.preview(filePath,success,error);
+```
+
+
 ## Supported Platforms
 
 - iOS
 
+- Android
 ----
+
 
 ## IOS Quirks
 preiview方法的第一个参数，目前只支持传入文件的绝对路径。
@@ -86,6 +106,13 @@ preiview方法的第一个参数，目前只支持传入文件的绝对路径。
 ```bash
 cordova plugin add cordova-plugin-file
 ```
+
+
+## Android Quirks
+NOTE：由于UIExtension中的和Reply相关的功能是使用FragmentActivity，当前的插件没有做处理，所以使用该功能时会有问题。后面会做进一步的处理。
+
+另外：当前该插件已经包含armeabi-v7a的库，如果想要支持其他平台，需要参考Foxit RDK将其他平台的库引入工程中即可。
+
 
 ### Quick Example
 
@@ -103,6 +130,8 @@ function preview(){
     window.FoxitPdf.preview(filePath,success,error);
 }
 ```
+
+
 ## Attention
 
 产品目前还是处于刚开发阶段. 后期将会着重于功能的完善和细化.
@@ -121,6 +150,7 @@ function preview(){
 
 http://www.foxitsdk.com/products/mobile-pdf-sdk/request-quote/?from=cordova-plugin-foxitpdf
 
+
 ## 
 
 
@@ -131,6 +161,8 @@ http://www.foxitsdk.com/products/mobile-pdf-sdk/request-quote/?from=cordova-plug
 
 1. Integrated Foxit RDK UI section, add jump page, full text search, thumbnail preview and other functions
 2. Adjust the plug-in integration, so that integration easier and more convenient
+3. Added support for android platform
+
 
 ## Installation
 ```bash
@@ -138,7 +170,7 @@ cordova plugin add cordova-plugin-foxitpdf
 ```
 
 
-## How To Use
+## iOS How To Use
 
 1. Remove references to FoxitSource, uitextensions. Create the FoxitSource group. (Because cordova plug-in can not create ios group)
 2. Turn off arc mode, Build Settings -> Objective-C Automatic Reference Counting to NO
@@ -155,12 +187,11 @@ cordova plugin add cordova-plugin-foxitpdf
 	@property (nonatomic, assign) BOOL isScreenLocked;
 	```
 4. Embed Foxit RDK.framework
-General -> Embed Frameworks -> + -> FoxitRDK.framework
+	General -> Embed Frameworks -> + -> FoxitRDK.framework
 
 5. In the project configuration to increase the direction of support
-General -> Deployment info -> Device Orientation ,   Check
-
-Portrait , Landscape Left , Landscape Right
+	General -> Deployment info -> Device Orientation ,   Check
+	Portrait , Landscape Left , Landscape Right
 
 
 Use this ,in everywhere in your project
@@ -177,11 +208,28 @@ window.FoxitPdf.preview(filePath,success,error);
 ```
 
 
+## Android How to use
+```js
+var success = function(data){
+    console.log(data);
+}
+var error = function(data){
+    console.log(data);
+}
+var filePath = 'file://path/to/your/file';
+// var filePath = "/mnt/sdcard/getting_started_ios.pdf";
+window.FoxitPdf.preview(filePath,success,error);
+```
+
+
 ## Supported Platforms
 
 - iOS
 
+- Android
 ----
+
+
 
 ## IOS Quirks
 
@@ -194,6 +242,13 @@ Use the following command to add the [cordova-plugin-file] (https://github.com/a
 ```bash
 cordova plugin add cordova-plugin-file
 ```
+
+
+## Android Quirks
+NOTE: Since the functionality associated with Reply in UIExtension is using FragmentActivity, the current plugin does not handle it, so there is a problem with using it. Will do further processing.
+
+In addition: the current plug-ins already contains armeabi-v7a library, if you want to support other platforms, you need to refer to the Foxit RDK library to other projects can be introduced into the project.
+
 
 ### Quick Example
 
@@ -211,6 +266,8 @@ function preview(){
     window.FoxitPdf.preview(filePath,success,error);
 }
 ```
+
+
 ## Attention
 
 The product is still in the early stage of development. Later will focus on the function of refinement and refinement.
@@ -223,6 +280,7 @@ You can ask us questions or bugs in [here](https://github.com/niuemperor/cordova
 You can also send email **huang_niu@foxitsoftware.com** to explain your problem.
 
 If you have a better code implementation, please fork this project and launch your Pull-Request, we will promptly deal with. thank!
+
 
 ## Request a Quote
 
