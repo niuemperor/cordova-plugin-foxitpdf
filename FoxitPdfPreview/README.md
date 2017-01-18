@@ -90,7 +90,6 @@ window.FoxitPdf.preview(filePath,success,error);
 ## Supported Platforms
 
 - iOS
-
 - Android
 ----
 
@@ -225,7 +224,6 @@ window.FoxitPdf.preview(filePath,success,error);
 ## Supported Platforms
 
 - iOS
-
 - Android
 ----
 
