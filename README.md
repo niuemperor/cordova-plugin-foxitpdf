@@ -21,7 +21,12 @@
 This plugin provides the ability to preview pdf files with Foxit RDK on a device.
 
 
+## iOS Screen Shot
 ![](https://raw.githubusercontent.com/niuemperor/cordova-plugin-foxitpdf/master/images/cordova-plugin-foxitpdf2.gif)
+
+
+## Android Screen Shot
+![](https://raw.githubusercontent.com/niuemperor/cordova-plugin-foxitpdf/master/images/cordova-plugin-foxitodf-android.png)
 
 
 ## What change
