@@ -21,6 +21,11 @@
 This plugin provides the ability to preview pdf files with Foxit RDK on a device.
 
 
+# NOTE
+现在这个git 已经转移到，官方git地址
+[https://github.com/foxitsoftware/cordova-plugin-foxitpdf](https://github.com/foxitsoftware/cordova-plugin-foxitpdf)
+
+
 ## iOS Screen Shot
 ![](https://raw.githubusercontent.com/niuemperor/cordova-plugin-foxitpdf/master/images/cordova-plugin-foxitpdf2.gif)
 
@@ -162,6 +167,10 @@ http://www.foxitsdk.com/products/mobile-pdf-sdk/request-quote/?from=cordova-plug
 
 
 
+
+# NOTE
+Now the git has been moved to the official git address
+[https://github.com/foxitsoftware/cordova-plugin-foxitpdf](https://github.com/foxitsoftware/cordova-plugin-foxitpdf)
 
 ## What change
 
